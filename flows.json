@@ -1,0 +1,1611 @@
+[
+    {
+        "id": "e15a1c411200cd01",
+        "type": "tab",
+        "label": "Medibox Dashboard",
+        "disabled": false,
+        "info": "Node-RED flow for Medibox project (EN2853 Assignment 2) with fixed light intensity graph"
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "dashboard_ui",
+        "type": "ui_tab",
+        "name": "Medibox Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "light_group",
+        "type": "ui_group",
+        "name": "Light Intensity",
+        "tab": "dashboard_ui",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "params_group",
+        "type": "ui_group",
+        "name": "Control Parameters",
+        "tab": "dashboard_ui",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "db93846c4a27d773",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "bccf21e81b0137d6",
+        "type": "ui_tab",
+        "name": "MediBox Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "3a64cdbc3f9bac9a",
+        "type": "ui_tab",
+        "name": "MediBox Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "9dd5274fccf0c174",
+        "type": "ui_tab",
+        "name": "Medibox Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a1b2c3d4.e5f678",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true
+    },
+    {
+        "id": "c3d4e5f6.a7b89a",
+        "type": "ui_tab",
+        "name": "Medibox Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b2c3d4e5.f6a789",
+        "type": "ui_group",
+        "name": "Light Intensity",
+        "tab": "c3d4e5f6.a7b89a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c4d5e6f7.b8c90b",
+        "type": "ui_group",
+        "name": "Servo Controls",
+        "tab": "c3d4e5f6.a7b89a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "cdef7890.123456",
+        "type": "ui_tab",
+        "name": "Medibox Dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "klmn5678.123456",
+        "type": "ui_group",
+        "name": "Interval Controls",
+        "tab": "cdef7890.123456",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bcde9012.123456",
+        "type": "ui_group",
+        "name": "Servo Parameters",
+        "tab": "cdef7890.123456",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7890gh12.123456",
+        "type": "mqtt-broker",
+        "name": "Wokwi MQTT",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "yzab3456.123456",
+        "type": "ui_group",
+        "name": "Light Monitoring",
+        "tab": "cdef7890.123456",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e7b566f7da8759fe",
+        "type": "ui_tab",
+        "name": "MediBox",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "66b420be72a8c9e1",
+        "type": "ui_group",
+        "name": "Light Intensity",
+        "tab": "e7b566f7da8759fe",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9e20606a33f7cf1f",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "e7b566f7da8759fe",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "bc3015dd328305a8",
+        "type": "ui_group",
+        "name": "Servo Parameters",
+        "tab": "e7b566f7da8759fe",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "836868b99f87c348",
+        "type": "ui_group",
+        "name": "Light History",
+        "tab": "e7b566f7da8759fe",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e907f8064b68c7b8",
+        "type": "ui_group",
+        "name": "Temperature History",
+        "tab": "e7b566f7da8759fe",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "41e8ab59aae68088",
+        "type": "ui_group",
+        "name": "Controls",
+        "tab": "e7b566f7da8759fe",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "db432d0e3c405338",
+        "type": "ui_tab",
+        "name": "MediBox",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8d0648f614de690a",
+        "type": "ui_group",
+        "name": "Light Monitoring",
+        "tab": "db432d0e3c405338",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d14e69505d941f76",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "db432d0e3c405338",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "858b7bfe6c99171a",
+        "type": "ui_group",
+        "name": "Servo Control",
+        "tab": "db432d0e3c405338",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6511f49134f10c28",
+        "type": "ui_group",
+        "name": "Light History",
+        "tab": "db432d0e3c405338",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e147a0a642f96aeb",
+        "type": "ui_group",
+        "name": "Temp History",
+        "tab": "db432d0e3c405338",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b8f118fc67cc3444",
+        "type": "ui_tab",
+        "name": "MediBox",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b46f96d21ebae3d4",
+        "type": "ui_group",
+        "name": "Light Monitoring",
+        "tab": "b8f118fc67cc3444",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b21a88fc7343f785",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "b8f118fc67cc3444",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "db4fd01a0793eba5",
+        "type": "ui_group",
+        "name": "Servo Control",
+        "tab": "b8f118fc67cc3444",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a66c92115de8124f",
+        "type": "ui_group",
+        "name": "Light History",
+        "tab": "b8f118fc67cc3444",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "8813ddcf953b5aed",
+        "type": "ui_group",
+        "name": "Temp History",
+        "tab": "b8f118fc67cc3444",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d6d0f803b316ed7e",
+        "type": "ui_tab",
+        "name": "MediBox",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "672d265b7cbec127",
+        "type": "ui_group",
+        "name": "Light Monitoring",
+        "tab": "d6d0f803b316ed7e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f5feea9ba9b69154",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "d6d0f803b316ed7e",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "12e799a6ada9d14a",
+        "type": "ui_group",
+        "name": "Servo Control",
+        "tab": "d6d0f803b316ed7e",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "228ead010aa838a1",
+        "type": "ui_group",
+        "name": "Light History",
+        "tab": "d6d0f803b316ed7e",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9f2856cb3e70fc86",
+        "type": "ui_group",
+        "name": "Temp History",
+        "tab": "d6d0f803b316ed7e",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2db36ed32111bc72",
+        "type": "ui_tab",
+        "name": "MediBox",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4f7e38294fc94efb",
+        "type": "ui_group",
+        "name": "Light Monitoring",
+        "tab": "2db36ed32111bc72",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "77c4beae35ef6dfd",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "2db36ed32111bc72",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "51ad84df411d21c6",
+        "type": "ui_group",
+        "name": "Servo Control",
+        "tab": "2db36ed32111bc72",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6f214e4c4cb7220c",
+        "type": "ui_group",
+        "name": "Light History",
+        "tab": "2db36ed32111bc72",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "dccaf38d5283724e",
+        "type": "ui_group",
+        "name": "Temp History",
+        "tab": "2db36ed32111bc72",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4064fe9a2a29c929",
+        "type": "ui_tab",
+        "name": "MediBox",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "21b398d0c82ca148",
+        "type": "ui_group",
+        "name": "Light Monitoring",
+        "tab": "4064fe9a2a29c929",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f5bc8988b8c5dbde",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "4064fe9a2a29c929",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "3afcc1b66a0b51fe",
+        "type": "ui_group",
+        "name": "Servo Control",
+        "tab": "4064fe9a2a29c929",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "341a63d3f2c6befe",
+        "type": "ui_group",
+        "name": "Temperature History",
+        "tab": "4064fe9a2a29c929",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "435b0be5776b5b27",
+        "type": "ui_tab",
+        "name": "MediBox",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "35908eab5b7dbb98",
+        "type": "ui_group",
+        "name": "Light Monitoring",
+        "tab": "435b0be5776b5b27",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a8ba91bcae194798",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "435b0be5776b5b27",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9ac77810850f02ea",
+        "type": "ui_group",
+        "name": "Servo Control",
+        "tab": "435b0be5776b5b27",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6fb642701fbe89b7",
+        "type": "ui_group",
+        "name": "Light History",
+        "tab": "435b0be5776b5b27",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "04b8d34e3191d554",
+        "type": "ui_group",
+        "name": "Temp History",
+        "tab": "435b0be5776b5b27",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "26ee66e4e1568ccc",
+        "type": "ui_tab",
+        "name": "Medibox Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8e2ffd896b8e5423",
+        "type": "ui_group",
+        "name": "Light Intensity Control",
+        "tab": "26ee66e4e1568ccc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f2aa9cae849abfeb",
+        "type": "ui_group",
+        "name": "Motor Parameters",
+        "tab": "26ee66e4e1568ccc",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9f5786329339fb6b",
+        "type": "ui_group",
+        "name": "System Control",
+        "tab": "26ee66e4e1568ccc",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d8b925bb889147d5",
+        "type": "ui_tab",
+        "name": "MediBox",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4b8512fa166dfbbc",
+        "type": "ui_group",
+        "name": "Light Monitoring",
+        "tab": "d8b925bb889147d5",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fe5e7102afc7cfe8",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "d8b925bb889147d5",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7d99dc9d6959aa20",
+        "type": "ui_group",
+        "name": "Servo Control",
+        "tab": "d8b925bb889147d5",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6b03c6b0aab3142f",
+        "type": "ui_group",
+        "name": "Light History",
+        "tab": "d8b925bb889147d5",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "159c5d5ae93a7be2",
+        "type": "ui_group",
+        "name": "Temp History",
+        "tab": "d8b925bb889147d5",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "251712629cc480f3",
+        "type": "ui_tab",
+        "name": "Medibox Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b83e13adfd552f4f",
+        "type": "ui_group",
+        "name": "Light Intensity Control",
+        "tab": "251712629cc480f3",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b01a7e1a785dca9b",
+        "type": "ui_group",
+        "name": "Motor Parameters",
+        "tab": "251712629cc480f3",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "1916b8daee2e2950",
+        "type": "ui_group",
+        "name": "System Control",
+        "tab": "251712629cc480f3",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fb3d2f37594322ea",
+        "type": "ui_tab",
+        "name": "MediBox",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "73e9c16e03a5c76a",
+        "type": "ui_group",
+        "name": "Light Monitoring",
+        "tab": "fb3d2f37594322ea",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "1343aa148f2ff646",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "fb3d2f37594322ea",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4d9c7ee30134c87f",
+        "type": "ui_group",
+        "name": "Servo Control",
+        "tab": "fb3d2f37594322ea",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ac418dbee0d71e23",
+        "type": "ui_group",
+        "name": "Light History",
+        "tab": "fb3d2f37594322ea",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "564d2eeb1722464a",
+        "type": "ui_group",
+        "name": "Temp History",
+        "tab": "fb3d2f37594322ea",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fb87b739f9807c9e",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "c3d4e5f6.a7b89a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "213cd753089ec8d6",
+        "type": "ui_group",
+        "name": "System Control",
+        "tab": "c3d4e5f6.a7b89a",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6ba87680551cc27b",
+        "type": "ui_group",
+        "name": "Light Intensity",
+        "tab": "bccf21e81b0137d6",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "669b24bc721da35f",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "bccf21e81b0137d6",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "8ec1529e17c1d23c",
+        "type": "ui_group",
+        "name": "Servo Parameters",
+        "tab": "bccf21e81b0137d6",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f14e1f726212cb7a",
+        "type": "ui_group",
+        "name": "Light Intensity",
+        "tab": "3a64cdbc3f9bac9a",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "f0ff167598d0a414",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "3a64cdbc3f9bac9a",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "737be7e5f4260d93",
+        "type": "ui_group",
+        "name": "Servo Parameters",
+        "tab": "3a64cdbc3f9bac9a",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "d486d8d861aab7bc",
+        "type": "ui_group",
+        "name": "Light Intensity Control",
+        "tab": "9dd5274fccf0c174",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "40528ddf783e3a5e",
+        "type": "ui_group",
+        "name": "Motor Parameters",
+        "tab": "9dd5274fccf0c174",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d47fb3b0aee25afa",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "c3d4e5f6.a7b89a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "cd1a07f0e2200d59",
+        "type": "ui_group",
+        "name": "System Control",
+        "tab": "c3d4e5f6.a7b89a",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "35d9fafe176d420c",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "c3d4e5f6.a7b89a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "993f8ffe384dac23",
+        "type": "ui_group",
+        "name": "System Control",
+        "tab": "c3d4e5f6.a7b89a",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c167523910bd12b4",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "c3d4e5f6.a7b89a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "68c55099e31afcc7",
+        "type": "ui_group",
+        "name": "System Control",
+        "tab": "c3d4e5f6.a7b89a",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "57cf93d605e9d8bc",
+        "type": "mqtt in",
+        "z": "e15a1c411200cd01",
+        "name": "LDR Data",
+        "topic": "220009/ldr",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "a1b2c3d4.e5f678",
+        "inputs": 0,
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "7007d4031df64004",
+                "0f4e4ce8e31c841e"
+            ]
+        ]
+    },
+    {
+        "id": "7007d4031df64004",
+        "type": "ui_gauge",
+        "z": "e15a1c411200cd01",
+        "name": "Light Intensity Gauge",
+        "group": "b2c3d4e5.f6a789",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Light Intensity",
+        "label": "units",
+        "format": "{{value | number:2}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "0.3",
+        "seg2": "0.7",
+        "x": 340,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "0f4e4ce8e31c841e",
+        "type": "function",
+        "z": "e15a1c411200cd01",
+        "name": "Format LDR Data",
+        "func": "// Format LDR data for the chart\nlet value = Number(msg.payload);\nif (!isNaN(value)) {\n    msg.payload = value; // Send numeric value directly\n    msg.topic = \"Light Intensity\"; // Optional, for series name\n    return msg;\n} else {\n    return null;\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "76117d2f78cb0a46"
+            ]
+        ]
+    },
+    {
+        "id": "76117d2f78cb0a46",
+        "type": "ui_chart",
+        "z": "e15a1c411200cd01",
+        "name": "Light Intensity Chart",
+        "group": "b2c3d4e5.f6a789",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "label": "Light Intensity History",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "No data available",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 620,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78901449e3997c6d",
+        "type": "ui_slider",
+        "z": "e15a1c411200cd01",
+        "name": "Sampling Interval",
+        "label": "Sampling Interval (s)",
+        "tooltip": "Set LDR sampling interval (1-60s)",
+        "group": "b2c3d4e5.f6a789",
+        "order": 3,
+        "width": "6",
+        "height": "0",
+        "passthru": true,
+        "outs": "end",
+        "topic": "220009/ts",
+        "min": "1",
+        "max": "60",
+        "step": "1",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "4fd2664bda23a140"
+            ]
+        ]
+    },
+    {
+        "id": "4fd2664bda23a140",
+        "type": "mqtt out",
+        "z": "e15a1c411200cd01",
+        "name": "Send Sampling Interval",
+        "topic": "220009/ts",
+        "qos": "2",
+        "retain": "true",
+        "broker": "a1b2c3d4.e5f678",
+        "x": 340,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "9f6b8d787aa9d143",
+        "type": "ui_slider",
+        "z": "e15a1c411200cd01",
+        "name": "Sending Interval",
+        "label": "Sending Interval (s)",
+        "tooltip": "Set LDR sending interval (30-300s)",
+        "group": "b2c3d4e5.f6a789",
+        "order": 4,
+        "width": "6",
+        "height": "0",
+        "passthru": true,
+        "outs": "end",
+        "topic": "220009/tu",
+        "min": "30",
+        "max": "300",
+        "step": "1",
+        "x": 120,
+        "y": 220,
+        "wires": [
+            [
+                "41d1be06c8ee92df"
+            ]
+        ]
+    },
+    {
+        "id": "41d1be06c8ee92df",
+        "type": "mqtt out",
+        "z": "e15a1c411200cd01",
+        "name": "Send Sending Interval",
+        "topic": "220009/tu",
+        "qos": "2",
+        "retain": "true",
+        "broker": "a1b2c3d4.e5f678",
+        "x": 340,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9cda47642ccf0ed0",
+        "type": "mqtt in",
+        "z": "e15a1c411200cd01",
+        "name": "Temperature Data",
+        "topic": "220009/MEDI_TEMP",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "a1b2c3d4.e5f678",
+        "inputs": 0,
+        "x": 120,
+        "y": 300,
+        "wires": [
+            [
+                "c61fb7649a2aa6b6",
+                "3fc4ae3cf435c12c"
+            ]
+        ]
+    },
+    {
+        "id": "c61fb7649a2aa6b6",
+        "type": "ui_gauge",
+        "z": "e15a1c411200cd01",
+        "name": "Temperature Gauge",
+        "group": "d47fb3b0aee25afa",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value | number:1}}",
+        "min": "0",
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#d62728"
+        ],
+        "seg1": "24",
+        "seg2": "32",
+        "x": 340,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "3fc4ae3cf435c12c",
+        "type": "ui_chart",
+        "z": "e15a1c411200cd01",
+        "name": "Temperature Chart",
+        "group": "d47fb3b0aee25afa",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "label": "Temperature History",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "No data available",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff7f0e",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 340,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0efa42aa7adefe8",
+        "type": "mqtt in",
+        "z": "e15a1c411200cd01",
+        "name": "Humidity Data",
+        "topic": "220009/MEDI_HUM",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "a1b2c3d4.e5f678",
+        "inputs": 0,
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "03f07cf53ff0665c"
+            ]
+        ]
+    },
+    {
+        "id": "03f07cf53ff0665c",
+        "type": "ui_gauge",
+        "z": "e15a1c411200cd01",
+        "name": "Humidity Gauge",
+        "group": "d47fb3b0aee25afa",
+        "order": 3,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value | number:1}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#2ca02c",
+            "#ff9900",
+            "#d62728"
+        ],
+        "seg1": "65",
+        "seg2": "80",
+        "x": 340,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "76f968697058e067",
+        "type": "mqtt in",
+        "z": "e15a1c411200cd01",
+        "name": "Servo Angle",
+        "topic": "220009/servo_angle",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "a1b2c3d4.e5f678",
+        "inputs": 0,
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "0b782993449d1517"
+            ]
+        ]
+    },
+    {
+        "id": "0b782993449d1517",
+        "type": "ui_gauge",
+        "z": "e15a1c411200cd01",
+        "name": "Servo Angle Gauge",
+        "group": "c4d5e6f7.b8c90b",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Servo Angle",
+        "label": "degrees",
+        "format": "{{value | number:1}}",
+        "min": "0",
+        "max": "180",
+        "colors": [
+            "#2ca02c",
+            "#98df8a",
+            "#d62728"
+        ],
+        "seg1": "60",
+        "seg2": "120",
+        "x": 340,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ec963b6d774e8ee9",
+        "type": "ui_slider",
+        "z": "e15a1c411200cd01",
+        "name": "Min Angle",
+        "label": "Min Angle (θ_offset, °)",
+        "tooltip": "Set minimum servo angle (0-120°)",
+        "group": "c4d5e6f7.b8c90b",
+        "order": 2,
+        "width": "6",
+        "height": "0",
+        "passthru": true,
+        "outs": "end",
+        "topic": "220009/theta_offset",
+        "min": "0",
+        "max": "120",
+        "step": "1",
+        "x": 120,
+        "y": 500,
+        "wires": [
+            [
+                "c30434e923854d01"
+            ]
+        ]
+    },
+    {
+        "id": "c30434e923854d01",
+        "type": "mqtt out",
+        "z": "e15a1c411200cd01",
+        "name": "Send Min Angle",
+        "topic": "220009/theta_offset",
+        "qos": "2",
+        "retain": "true",
+        "broker": "a1b2c3d4.e5f678",
+        "x": 340,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "63465cb25e94dcbb",
+        "type": "ui_slider",
+        "z": "e15a1c411200cd01",
+        "name": "Control Factor",
+        "label": "Control Factor (γ)",
+        "tooltip": "Set control factor (0-1)",
+        "group": "c4d5e6f7.b8c90b",
+        "order": 3,
+        "width": "6",
+        "height": "0",
+        "passthru": true,
+        "outs": "end",
+        "topic": "220009/gamma",
+        "min": "0",
+        "max": "1",
+        "step": "0.01",
+        "x": 120,
+        "y": 540,
+        "wires": [
+            [
+                "25474989de414533"
+            ]
+        ]
+    },
+    {
+        "id": "25474989de414533",
+        "type": "mqtt out",
+        "z": "e15a1c411200cd01",
+        "name": "Send Control Factor",
+        "topic": "220009/gamma",
+        "qos": "2",
+        "retain": "true",
+        "broker": "a1b2c3d4.e5f678",
+        "x": 340,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "e1e835023e05b345",
+        "type": "ui_slider",
+        "z": "e15a1c411200cd01",
+        "name": "Ideal Temperature",
+        "label": "Ideal Temp (T_med, °C)",
+        "tooltip": "Set ideal temperature (10-40°C)",
+        "group": "c4d5e6f7.b8c90b",
+        "order": 4,
+        "width": "6",
+        "height": "0",
+        "passthru": true,
+        "outs": "end",
+        "topic": "220009/tmed",
+        "min": "10",
+        "max": "40",
+        "step": "0.1",
+        "x": 120,
+        "y": 580,
+        "wires": [
+            [
+                "e379f7d54026725c"
+            ]
+        ]
+    },
+    {
+        "id": "e379f7d54026725c",
+        "type": "mqtt out",
+        "z": "e15a1c411200cd01",
+        "name": "Send Ideal Temperature",
+        "topic": "220009/tmed",
+        "qos": "2",
+        "retain": "true",
+        "broker": "a1b2c3d4.e5f678",
+        "x": 340,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "81193c4c6d7f94ef",
+        "type": "mqtt in",
+        "z": "e15a1c411200cd01",
+        "name": "System Power",
+        "topic": "220009/on_off",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "a1b2c3d4.e5f678",
+        "inputs": 0,
+        "x": 120,
+        "y": 660,
+        "wires": [
+            [
+                "3b6194b72610edf2"
+            ]
+        ]
+    },
+    {
+        "id": "3b6194b72610edf2",
+        "type": "ui_text",
+        "z": "e15a1c411200cd01",
+        "group": "cd1a07f0e2200d59",
+        "order": 1,
+        "width": "6",
+        "height": "0",
+        "name": "System Status",
+        "label": "System Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 340,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "b4b089a5f799f093",
+        "type": "ui_switch",
+        "z": "e15a1c411200cd01",
+        "name": "System Power Switch",
+        "label": "System Power",
+        "tooltip": "Turn Medibox ON/OFF",
+        "group": "cd1a07f0e2200d59",
+        "order": 2,
+        "width": "6",
+        "height": "0",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "220009/on_off",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "fa-power-off",
+        "oncolor": "green",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "fa-power-off",
+        "offcolor": "red",
+        "x": 120,
+        "y": 700,
+        "wires": [
+            [
+                "c6b2cb97b6165915"
+            ]
+        ]
+    },
+    {
+        "id": "c6b2cb97b6165915",
+        "type": "mqtt out",
+        "z": "e15a1c411200cd01",
+        "name": "Send Power State",
+        "topic": "220009/on_off",
+        "qos": "2",
+        "retain": "true",
+        "broker": "a1b2c3d4.e5f678",
+        "x": 340,
+        "y": 700,
+        "wires": []
+    }
+]
